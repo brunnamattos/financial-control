@@ -22,5 +22,9 @@ export default function getTotalTransactions(props) {
     totalSaidas = 0;
   }
 
-  return totalEntradas - totalSaidas;
+  return {
+    totalEntradas,
+    totalSaidas,
+    totalTransactions: totalEntradas - totalSaidas,
+  };
 }
