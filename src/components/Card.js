@@ -1,13 +1,11 @@
 export default function Card(props) {
-  console.log(props);
   return (
-    <div className="card">
-      <svg-icon
-        className={`icon-arrow-right-${props.color}`}
-        src="../assets/icons/arrow-right.svg"
-      ></svg-icon>
+    <div className={`card ${props.color}`}>
+      {props.childrens}
       <span className="card-title">{props.title}</span>
-      <span className="card-value">{props.value}</span>
+      <span className="card-value">
+        R$ {props.totalValue ? props.totalValue : "0,00"}
+      </span>
     </div>
   );
 }

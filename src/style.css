@@ -2,9 +2,92 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #3d3d3d;
 }
 
 body * {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  transition: all 0.25s ease-in-out;
+}
+
+body {
+  background-color: #3d3d3d;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #2d2d2d;
+  margin-bottom: 80px;
+}
+
+header img {
+  background: none;
+  height: 40px;
+}
+
+main {
+  height: 100vh;
+  padding: 0 5rem 5rem;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100vw;
+  height: 120px;
+  margin-right: 20px;
+  padding: 22px 25px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card.blue {
+  background-color: #0dbacc;
+}
+
+.card.green {
+  background-color: #57ca70;
+}
+
+.card.red {
+  background-color: #de5656;
+  margin-right: 0;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card-value {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
 }
