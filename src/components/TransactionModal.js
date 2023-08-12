@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useFinance } from "../context/FinanceContext";
 import FinanceProvider from "../context/FinanceContext";
+import uuid from "react-uuid"
 
 const TransactionModal = ({ transaction, onClose }) => {
   const [paid, setPaid] = useState(false);
@@ -8,9 +9,9 @@ const TransactionModal = ({ transaction, onClose }) => {
   const [category, setCategory] = useState("");
   const [value, setValue] = useState("");
   const [formError, setFormError] = useState(null);
-
+  
   const { dispatch } = useFinance();
-
+  
   useEffect(() => {
     if (transaction) {
       setPaid(transaction.paid);
@@ -19,24 +20,27 @@ const TransactionModal = ({ transaction, onClose }) => {
       setValue(transaction.value.toString());
     }
   }, [transaction]);
-
-  const handleUpdateTransaction = () => {
+  
+  const handleCreateTransaction = () => {
     if (!paid || !category || !value) {
       setFormError("Todos os campos são obrigatórios");
       return;
     }
-
+    const newId = uuid();
+    
     const updatedTransaction = {
-      ...transaction,
+      ...transaction, 
+      date: new Date(),
       paid,
       type,
       category,
       value: parseFloat(value),
+      id: newId
     };
 
     dispatch({
-      type: "EDIT_TRANSACTION",
-      payload: { id: transaction.id, updatedTransaction },
+      type: "ADD_TRANSACTION",
+      payload: updatedTransaction,
     });
     onClose();
   };
@@ -46,7 +50,7 @@ const TransactionModal = ({ transaction, onClose }) => {
       <div className="transaction-modal">
         <div className="modal-content">
           <div className="modal-header">
-            <h2>Editar transação</h2>
+            <h2>Nova transação</h2>
             <button className="close-button" onClick={onClose}>
               Fechar
             </button>
@@ -96,9 +100,9 @@ const TransactionModal = ({ transaction, onClose }) => {
           <div className="modal-footer">
             <button
               className="update-button"
-              onClick={() => handleUpdateTransaction(transaction)}
+              onClick={() => handleCreateTransaction(transaction)}
             >
-              Atualizar transação
+              Criar transação
             </button>
           </div>
         </div>

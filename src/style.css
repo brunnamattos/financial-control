@@ -8,7 +8,6 @@ body * {
   font-family: "Nunito", sans-serif;
   font-style: normal;
   line-height: normal;
-  transition: all 0.25s ease-in-out;
 }
 
 body {
@@ -44,6 +43,25 @@ section {
   font-weight: 700;
 }
 
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-icon-green, .btn-icon.green:hover {
+  color: #57ca70;
+}
+
+.btn-icon.blue:hover {
+  color: #0dbacc;
+}
+
+.btn-icon-red, .btn-icon.red:hover {
+  color: #de5656;
+}
+
 .cards {
   display: flex;
   align-items: center;
@@ -61,6 +79,7 @@ section {
   margin-right: 20px;
   padding: 22px 25px;
   border-radius: 10px;
+  transition: all 0.25s ease-in-out;
 }
 
 .card:hover {
