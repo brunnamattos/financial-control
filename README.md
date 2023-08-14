@@ -22,6 +22,8 @@
     <br />
     <a href="https://financial-control-topaz.vercel.app/">View Demo</a>
     ·
+    <a href="https://www.figma.com/file/X7EL4fReXUGcE7GVE98efC/SenFinance?type=design&node-id=0-1&mode=design&t=ZGv6nMLvQCuTv7MJ-0">View Figma Layout</a>
+    ·
     <a href="https://github.com/brunnamattos/financial-control/issues">Report Bug</a>
     ·
     <a href="https://github.com/brunnamattos/financial-control/issues">Request Feature</a>
@@ -61,7 +63,7 @@
 
 <br />
 <br />
-<a href="https://github.com/brunnamattos/financial-control">
+<a href="https://financial-control-topaz.vercel.app/">
     <img src="src/assets/images/financialcontroldemo.png" alt="Demo app">
 </a>
 <br />
