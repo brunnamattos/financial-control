@@ -32,7 +32,7 @@ const TransactionSection = () => {
 
     const transactionObj = {
       id: newId,
-      date: new Date(),
+      date: new Date().toISOString(),
       paid,
       type,
       category,

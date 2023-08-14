@@ -4,8 +4,6 @@ const FinanceReducer = (state, action) => {
       const updatedTransactions = [...state.transactions, action.payload];
       localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
 
-      // console.log({transactions: [...state.transactions, action.payload]});
-
       return {...state, transactions: [...state.transactions, action.payload]};
 
     case "DELETE_TRANSACTION":

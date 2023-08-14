@@ -88,9 +88,6 @@ const TransactionTable = () => {
 
   return (
     <>
-      {transactions
-        .filter(filterTypeAndCategory)
-        .map((transaction) => console.log(transaction))}
       <div className="transaction-table">
         <div className="total-values-table">
           <div className="total-value-table">
