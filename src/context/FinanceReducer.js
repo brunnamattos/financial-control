@@ -3,7 +3,10 @@ const FinanceReducer = (state, action) => {
     case "ADD_TRANSACTION":
       const updatedTransactions = [...state.transactions, action.payload];
       localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
-      return { ...state, transactions: updatedTransactions };
+
+      // console.log({transactions: [...state.transactions, action.payload]});
+
+      return {...state, transactions: [...state.transactions, action.payload]};
 
     case "DELETE_TRANSACTION":
       const filteredTransactions = state.transactions.filter(
@@ -18,7 +21,7 @@ const FinanceReducer = (state, action) => {
     case "EDIT_TRANSACTION":
       const editedTransactions = state.transactions.map((transaction) => {
         if (transaction.id === action.payload.id) {
-          return { ...transaction, ...action.payload.updatedTransaction };
+          return { ...transaction, ...action.payload };
         }
         return transaction;
       });
