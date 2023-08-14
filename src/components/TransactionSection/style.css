@@ -1,0 +1,24 @@
+.table-actions {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 20px 0 60px;
+}
+
+.new-transaction-button {
+  background-color: #0dbacc;
+}
+
+.new-transaction-button:hover {
+  background: #0ca1b1;
+}
+
+.new-transaction-button span {
+  margin-right: 10px;
+}
+
+.new-transaction-button.icon {
+  height: 22px;
+  width: 22px;
+}
