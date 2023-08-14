@@ -1,0 +1,23 @@
+.plus-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0dbacc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.plus-icon-wrapper svg {
+  color: white;
+  width: 16px;
+  height: 16px;
+}
+
+.modal-header h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+}
