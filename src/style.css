@@ -18,6 +18,7 @@ body * {
 
 body {
   background-color: #3d3d3d;
+  height: 100rem;
 }
 
 header {
@@ -172,7 +173,7 @@ select {
 
 .modal-background {
   background-color: black;
-  width: 100rem;
+  width: 100vw;
   height: 100rem;
   position: absolute;
   top: 0px;
